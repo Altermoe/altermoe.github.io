@@ -1,4 +1,4 @@
-name: NodeJS
+name: Github Pages
 
 on:
   push:
@@ -49,8 +49,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4.0.5
+      - name: Upload artifact
+        id: upload-artifact
+        uses: actions/upload-artifact@v4
         with:
-          artifact_name: 'altermoe.github.io'
+          path: ./dist
+
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
