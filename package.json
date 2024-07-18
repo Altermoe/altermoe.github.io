@@ -3,11 +3,12 @@
   "author": "Altermoe <kuroneko7520@outlook.com>",
   "version": "0.0.1",
   "description": "个人网站",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
-  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.14.11",
     "eslint": "^9.7.0",
