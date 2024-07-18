@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "gruntfuggly.todo-tree",
+    "bradlc.vscode-tailwindcss",
+    "pkief.material-icon-theme",
+    "shardulm94.trailing-spaces",
+    "csstools.postcss",
+    "christian-kohler.npm-intellisense",
+    "herrmannplatz.npm-dependency-links",
+    "mhutchie.git-graph",
+    "eamodio.gitlens",
+    "usernamehw.errorlens"
+  ],
+  "unwantedRecommendations": [
+    // 与 volar 冲突
+    "hollowtree.vue-snippets",
+    // 与 volar 冲突
+    "Wscats.vue",
+    // 这是 vue2 的
+    "octref.vetur",
+    // 已被 volar 代替
+    "Vue.vscode-typescript-vue-plugin",
+  ]
+}
