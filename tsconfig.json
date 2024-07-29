@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "noImplicitAny": false,
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "incremental": false,
+    "skipLibCheck": false,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Bundler",
+    "checkJs": true,
+    "lib": ["DOM", "ESNext", "ScriptHost", "WebWorker"],
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "outDir": "build"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.d.ts",
+    "types/*.d.ts",
+  ],
+  "exclude": ["dist", ".vscode", "node_modules", "public"],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

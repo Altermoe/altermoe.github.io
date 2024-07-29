@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
+import Vue from '@vitejs/plugin-vue'
 
 export default defineConfig(() => {
   return {
@@ -13,6 +14,8 @@ export default defineConfig(() => {
       // 禁用生产版本中水合不匹配的详细警告以优化
       __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
     },
+
+    envDir: './envs',
 
     server: {
       host: '0.0.0.0',
@@ -35,6 +38,8 @@ export default defineConfig(() => {
       ],
     },
 
-    plugins: [],
+    plugins: [
+      Vue(),
+    ],
   }
 })
