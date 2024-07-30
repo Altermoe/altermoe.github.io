@@ -1,6 +1,7 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
 
 export default defineConfig(() => {
   return {
@@ -40,6 +41,10 @@ export default defineConfig(() => {
 
     plugins: [
       Vue(),
+      AutoImport({
+        imports: ['vue'],
+        dts: './types/imports.d.ts'
+      }),
     ],
   }
 })
