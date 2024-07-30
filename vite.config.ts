@@ -42,7 +42,7 @@ export default defineConfig(() => {
     plugins: [
       Vue(),
       AutoImport({
-        imports: ['vue', '@vueuse/core'],
+        imports: ['vue', 'vue-router', '@vueuse/core'],
         dts: './types/imports.d.ts'
       }),
     ],

@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
-    "vue": "^3.4.34"
+    "vue": "^3.4.34",
+    "vue-router": "^4.4.0"
   },
   "engines": {
     "node": ">=20.0.0",
