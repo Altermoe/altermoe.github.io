@@ -12,7 +12,7 @@ const collapse = defineModel<boolean>('collapse', {
     class="
       px-3 overflow-hidden
       absolute top-0 z-10
-      flex items-center gap-2
+      flex justify-between items-center gap-2
     "
   >
     <WinButton square @click="collapse = !collapse">
