@@ -22,7 +22,7 @@ defineProps<{
   </button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .win-button {
   @apply
     py-[5px] px-[12px] rounded
