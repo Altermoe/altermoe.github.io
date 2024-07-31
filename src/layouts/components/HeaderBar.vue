@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { WinButton } from '@/components'
+import { isDark } from '@/shared'
+
 const collapse = defineModel<boolean>('collapse', {
   required: true,
 })
@@ -7,24 +10,17 @@ const collapse = defineModel<boolean>('collapse', {
 <template>
   <div
     class="
-      px-4
-      absolute top-0 z-10 overflow-hidden flex items-center
-      text-sm
+      px-3 overflow-hidden
+      absolute top-0 z-10
+      flex items-center gap-2
     "
   >
-    <div
-      class="
-        w-8 p-1 px-2
-        grid place-content-center
-        border rounded
-        hover:bg-[skyblue]
-        active:bg-[gold]
-        font-mono
-        select-none cursor-pointer
-      "
-      @click="collapse = !collapse"
-    >
-      {{ collapse ? '>' : '<' }}
-    </div>
+    <WinButton square @click="collapse = !collapse">
+      {{ collapse ? '' : '' }}
+    </WinButton>
+
+    <WinButton circle @click="isDark = !isDark">
+      {{ isDark ? '' : '' }}
+    </WinButton>
   </div>
 </template>
