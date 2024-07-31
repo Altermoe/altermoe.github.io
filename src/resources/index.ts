@@ -13,7 +13,7 @@ export const resourceManager: Plugin = {
       const family = url.split('/').at(-1)
       if (!family)
         return
-      const fontface = new FontFace(family.replace(/\..+/, ''), `url(${url})`)
+      const fontface = new FontFace(family.replace(/(\-[A-Za-z0-9]+)?\..+/, ''), `url(${url})`)
       await fontface.load()
       if (document.fonts)
       document.fonts.add(fontface)
