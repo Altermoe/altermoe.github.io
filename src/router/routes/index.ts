@@ -4,11 +4,17 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: '总览',
+    meta: {
+      icon: '',
+    },
     component: () => import('@/pages/dashboard/Dashboard.vue'),
   },
   {
     path: '/dev',
     name: '开发者',
+    meta: {
+      icon: '',
+    },
     component: () => import('@/pages/development/Development.vue'),
   },
 ]
