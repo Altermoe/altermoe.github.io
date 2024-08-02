@@ -43,7 +43,7 @@ const collapse = ref(false)
 
     <div
       class="
-        w-full h-full overflow-hidden
+        w-full h-full overflow-auto
         border-t-[1px] border-stroke-cardDefault
         bg-bg-layerDefault
       "
