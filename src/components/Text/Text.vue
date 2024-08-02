@@ -6,8 +6,9 @@ defineOptions({
 withDefaults(defineProps<{
   tag?: 'div' | 'p' | 'span'
   type?: 'caption' | 'body' | 'body-strong' | 'subtitle' | 'title' | 'title-large' | 'display'
+  inline?: boolean
 }>(), {
-  tag: 'span',
+  tag: 'div',
   type: 'body'
 })
 </script>
@@ -15,7 +16,10 @@ withDefaults(defineProps<{
 <template>
   <component
     :is="tag"
-    :class="type"
+    :class="[
+      type,
+      inline ? 'is-inline' : '',
+    ]"
     class="win-text"
   >
     <slot name="default" />
@@ -50,6 +54,10 @@ withDefaults(defineProps<{
 
   &.display {
     @apply text-[68px] leading-[92px] font-semibold;
+  }
+
+  &.is-inline {
+    @apply overflow-hidden whitespace-nowrap text-ellipsis;
   }
 }
 </style>
