@@ -11,7 +11,7 @@ export const routes: RouteRecordRaw[] = [
   },
   {
     path: '/dev',
-    name: '开发者',
+    name: '技术栈',
     meta: {
       icon: '',
     },
