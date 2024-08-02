@@ -1,3 +1,8 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  总览
+  <div class="p-6 h-full overflow-auto min-w-[408px] grid place-content-center">
+    设计中...
+  </div>
 </template>
