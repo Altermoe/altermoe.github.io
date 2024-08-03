@@ -43,6 +43,7 @@ const collapse = ref(false)
 
     <div
       class="
+        min-w-[100dvw] sm:min-w-full
         w-full h-full overflow-auto
         border-t-[1px] border-stroke-cardDefault
         bg-bg-layerDefault
