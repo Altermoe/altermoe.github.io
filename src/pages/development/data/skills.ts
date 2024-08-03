@@ -113,7 +113,7 @@ export const SKILL_LIST: Skill[] = [
       {
         title: 'Vite.js',
         summary: '下一代的前端工具链。为开发提供极速响应。',
-        link: 'https://cn.vitejs.dev/',
+        link: 'https://vitejs.dev/',
         icon: Vite,
       },
     ],
