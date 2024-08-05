@@ -4,7 +4,7 @@ import { SKILL_LIST } from './data'
 </script>
 
 <template>
-  <div class="p-6 h-full flex flex-col overflow-auto min-w-[408px]">
+  <div class="p-6 h-full flex flex-col overflow-auto">
     <div v-for="group in SKILL_LIST" :key="group.title" class="mb-10">
       <WinText tag="div" type="subtitle" class="mb-3">
         {{ group.title }}
