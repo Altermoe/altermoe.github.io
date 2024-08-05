@@ -1,6 +1,6 @@
-import defaultTheme from './themes/default.mjs'
+import type { Config } from 'tailwindcss'
+import defaultTheme from './themes/default'
 
-/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     './index.html',
@@ -189,4 +189,4 @@ export default {
     },
   },
   plugins: [],
-}
+} as Config
