@@ -21,7 +21,7 @@ const router = useRouter()
       "
     >
       <RouterLink
-        v-for="route in router.getRoutes()"
+        v-for="route in router.options.routes"
         :key="route.path"
         :to="route.path"
         active-class="is-actived"
@@ -29,7 +29,7 @@ const router = useRouter()
         class="nav-router-link"
         draggable="false"
       >
-      <div v-if="route.meta.icon" class="w-5 h-5 font-[SegoeIcons]">
+      <div v-if="route.meta?.icon" class="w-5 h-5 font-[SegoeIcons]">
         {{ route.meta.icon }}
       </div>
       <span>{{ route.name }}</span>
