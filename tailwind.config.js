@@ -1,3 +1,5 @@
+import defaultTheme from './themes/default.mjs'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -146,6 +148,7 @@ export default {
         solidNeutralBackground: 'light-dark(#f3f3f3, #2e2e2e)',
         solidAttentionBackground: 'light-dark(#f7f7f7, #2e2e2e)',
       },
+      color: defaultTheme,
     },
     spacing: {
       0: '0px',
