@@ -44,13 +44,39 @@ const collapse = ref(false)
     <div
       class="
         min-w-[100dvw] sm:min-w-full
-        w-full h-full overflow-auto
+        w-full h-full overflow-hidden
         border-t-[1px] border-stroke-cardDefault
         bg-bg-layerDefault
       "
       :class="collapse ? '' : 'border-l-[1px] rounded-[8px_0_0_0]'"
     >
-      <RouterView />
+      <RouterView #default="{ Component }">
+        <Transition name="route" mode="out-in">
+          <component v-if="Component" :is="Component" />
+          <div v-else class="h-full grid place-content-center bg-bg-solidBase">
+            Loading
+          </div>
+        </Transition>
+      </RouterView>
     </div>
   </div>
 </template>
+
+<style>
+.route-enter-active {
+  transition: all 150ms ease;
+}
+
+.route-enter-from {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.route-leave-active {
+  transition: all 50ms ease;
+}
+
+.route-leave-to {
+  opacity: 0;
+}
+</style>
