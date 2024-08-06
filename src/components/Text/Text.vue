@@ -4,8 +4,11 @@ defineOptions({
 })
 
 withDefaults(defineProps<{
+  /** 组件渲染的 tag */
   tag?: 'div' | 'p' | 'span'
+  /** 文本类型 */
   type?: 'caption' | 'body' | 'body-strong' | 'subtitle' | 'title' | 'title-large' | 'display'
+  /** 是否不换行? 超出宽度时自动使文本溢出省略 */
   inline?: boolean
 }>(), {
   tag: 'div',
@@ -26,7 +29,7 @@ withDefaults(defineProps<{
   </component>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .win-text {
   &.caption {
     @apply text-xs text-text-secondary;
