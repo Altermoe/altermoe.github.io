@@ -19,7 +19,7 @@ const router = useRouter()
           <component :is="Component" />
         </div>
 
-        <div v-else class="p-6 h-full flex flex-wrap place-content-start gap-4">
+        <div v-else class="p-6 h-full grid grid-cols-[repeat(auto-fill,192px)] auto-rows-auto gap-4">
           <CraftPreview
             v-for="child in route.matched[0].children"
             :key="child.path"

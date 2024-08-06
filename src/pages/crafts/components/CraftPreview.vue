@@ -15,10 +15,7 @@ const { state: meta } = useAsyncState<ComponentMeta>(async () => {
 </script>
 
 <template>
-  <RouterLink
-    :to="route.path"
-    class="tool-item"
-  >
+  <RouterLink :to="route.path" class="tool-item">
     <WinText class="mb-1">{{ meta.title }}</WinText>
     <WinText type="caption">{{ meta.summary }}</WinText>
   </RouterLink>
@@ -29,7 +26,7 @@ const { state: meta } = useAsyncState<ComponentMeta>(async () => {
   flex-direction: column;
   @apply
     block
-    w-48 h-24 p-4 rounded
+    w-full h-fit p-4 rounded
     border border-color-NeutralStroke1
     bg-color-NeutralBackground1
     select-none
