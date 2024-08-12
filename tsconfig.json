@@ -13,7 +13,7 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "Bundler",
     "checkJs": true,
-    "lib": ["DOM", "ESNext", "ScriptHost", "WebWorker"],
+    "lib": ["DOM", "ESNext", "WebWorker", "DOM.Iterable", "DOM.AsyncIterable"],
     "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
