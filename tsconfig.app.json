@@ -1,0 +1,30 @@
+
+{
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "preserve",
+    "noImplicitAny": false,
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "incremental": false,
+    "skipLibCheck": false,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Bundler",
+    "checkJs": true,
+    "lib": ["DOM", "ESNext", "WebWorker", "DOM.Iterable", "DOM.AsyncIterable"],
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "outDir": "build"
+  },
+  "include": [
+    "src/**/*",
+    "types/*.d.ts",
+  ],
+}
