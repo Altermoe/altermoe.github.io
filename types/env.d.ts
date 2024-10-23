@@ -4,6 +4,9 @@
 interface ImportMetaEnv {
   /** 页面标题 */
   readonly VITE_TITLE: string
+
+  /** websocket 地址 */
+  readonly VITE_SOCKET_HOST: string
 }
 
 interface ImportMeta {
