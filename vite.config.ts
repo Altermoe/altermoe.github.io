@@ -1,9 +1,14 @@
 import path from 'node:path'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
+import TopLevelAwait from 'vite-plugin-top-level-await'
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, './envs') as ImportMetaEnv
+
+  console.table(env)
+
   return {
     define: {
       // 关闭选项式 API 支持
@@ -40,6 +45,7 @@ export default defineConfig(() => {
     },
 
     plugins: [
+      TopLevelAwait(),
       Vue(),
       AutoImport({
         imports: ['vue', 'vue-router', '@vueuse/core'],
