@@ -20,6 +20,14 @@ export const routes: RouteRecordRaw[] = [
     children: getCrafts('/crafts'),
   },
   {
+    path: '/webrtc',
+    name: 'WebRTC',
+    meta: {
+      icon: '',
+    },
+    component: () => import('@/pages/webrtc/WebRTC.vue'),
+  },
+  {
     path: '/dev',
     name: '技术栈',
     meta: {
