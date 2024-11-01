@@ -6,7 +6,7 @@ const props = defineProps<{
   route: RouteRecordRaw
 }>()
 
-const { state: meta } = useAsyncState<ComponentMeta>(async () => {
+const { state: meta, isLoading } = useAsyncState<ComponentMeta>(async () => {
   const { component } = props.route
   if (typeof component !== 'function') return {}
   const module = await (component as () => Promise<{ default: { meta: ComponentMeta } }>)()
@@ -16,8 +16,13 @@ const { state: meta } = useAsyncState<ComponentMeta>(async () => {
 
 <template>
   <RouterLink :to="route.path" class="tool-item">
-    <WinText class="mb-1">{{ meta.title }}</WinText>
-    <WinText type="caption">{{ meta.summary }}</WinText>
+    <div v-if="isLoading" class="h-[72px]">
+      Loading
+    </div>
+    <template v-else>
+      <WinText class="mb-1">{{ meta.title }}</WinText>
+      <WinText type="caption">{{ meta.summary }}</WinText>
+    </template>
   </RouterLink>
 </template>
 
