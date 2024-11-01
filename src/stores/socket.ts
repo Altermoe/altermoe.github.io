@@ -14,7 +14,7 @@ declare namespace WsData {
 }
 
 export const useSocketStore = defineStore('socket', () => {
-  const socket = io('ws://192.168.123.48:3000')
+  const socket = io(import.meta.env.VITE_SOCKET_HOST)
 
   const status = ref('disconnect')
 
