@@ -37,7 +37,7 @@ export const downloadByFetch = async (url: string, options: DownloadOptions) => 
    * 才能获得 ReadableStream 的异步迭代类型支持
    */
   for await (const value of response.body!) {
-    blobParts.push(value.buffer)
+    blobParts.push(new Uint8Array(value.buffer))
     const loaded = value.byteLength
     bytesRead += loaded
     const progress = (bytesRead / total) * 100
