@@ -34,7 +34,7 @@ const bytesToText = (bytes: number) => {
 const { isLoading, execute: download } = useAsyncState(async () => {
   // ================== 创建测试文件 ==================
 
-  btnText.value = '正在准备文件...'
+  btnText.value = '正在创建模拟线程...'
 
   const SIZE = 2 ** 30 // 1 GB
 
@@ -45,6 +45,8 @@ const { isLoading, execute: download } = useAsyncState(async () => {
     globalThis.postMessage(data, [data.buffer])
   }
   const workerURL = URL.createObjectURL(new Blob([`(${workerFn})(${SIZE})`], { type: 'text/javascript' }))
+
+  btnText.value = '正在准备文件...'
 
   const worker = new Worker(workerURL, {
     name: 'demo-worker',
