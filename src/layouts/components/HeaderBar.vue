@@ -1,16 +1,9 @@
 <script setup lang="ts">
 import { WinButton } from '@/components'
 import { isDark } from '@/shared'
-import { useSocketStore } from '@/stores'
 
 const collapse = defineModel<boolean>('collapse', {
   required: true,
-})
-
-const socketStore = useSocketStore()
-
-onUnmounted(() => {
-  socketStore.socket.close()
 })
 </script>
 
@@ -30,8 +23,6 @@ onUnmounted(() => {
         <path d="M864 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32zM864 480H352c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32zM864 800H352c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32z"></path>
       </svg>
     </WinButton>
-
-    <div>在线人数: {{ socketStore.clients.length }}</div>
 
     <WinButton circle @click="isDark = !isDark">
       {{ isDark ? '' : '' }}
