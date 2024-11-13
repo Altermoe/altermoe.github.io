@@ -12,7 +12,7 @@ export const routes: RouteRecordRaw[] = [
   },
   {
     path: '/crafts',
-    name: '技巧',
+    name: '工艺',
     meta: {
       icon: '',
     },
